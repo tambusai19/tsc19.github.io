@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1213,6 +1216,9 @@ input, select, textarea {
 			#wrapper {
 				padding: 3rem 2rem;
 			}
+			#header .logo img {
+				width: 93px;
+			}
 
 		}
 
@@ -1222,7 +1228,7 @@ input, select, textarea {
 				padding: 2rem 1rem;
 			}
 			#header .logo img {
-				width:90px;
+				width:77px;
 			}
 
 		}
@@ -1233,7 +1239,11 @@ input, select, textarea {
 				padding: 1rem;
 			}
 			#header .logo img {
-				width:90px;
+				width: 72px;
+			}
+			#header nav ul li a{
+				font-size:1.5rem !important;
+				height: 3.25rem;
 			}
 
 		}
@@ -1305,9 +1315,6 @@ input, select, textarea {
 			position: relative;
 			left: -3px;
 			top: -16px;
-		}
-		#header .logo img {
-			width:77px;
 		}
 
 			#header .logo .icon:before {
@@ -1443,6 +1450,24 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
+			#header nav ul {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				min-width: 10rem;
+				max-width: 100%;
+			}
+			#header nav.use-middle:after {
+				display: none;
+			}
+			#header nav ul li {
+				border-left: 0;
+				border-top: solid 1px #ffffff;
+			}
+			#header nav ul li a {
+				font-size:1.6rem;
+			}
 			#header > * {
 				margin-top: 2rem;
 			}
