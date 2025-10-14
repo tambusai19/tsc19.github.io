@@ -1221,6 +1221,9 @@ input, select, textarea {
 			#wrapper {
 				padding: 2rem 1rem;
 			}
+			#header .logo img {
+				width:90px;
+			}
 
 		}
 
@@ -1228,6 +1231,9 @@ input, select, textarea {
 
 			#wrapper {
 				padding: 1rem;
+			}
+			#header .logo img {
+				width:90px;
 			}
 
 		}
@@ -1299,6 +1305,9 @@ input, select, textarea {
 			position: relative;
 			left: -3px;
 			top: -16px;
+		}
+		#header .logo img {
+			width:77px;
 		}
 
 			#header .logo .icon:before {
