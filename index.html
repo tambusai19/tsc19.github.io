@@ -27,6 +27,7 @@
 						<div class="logo">
 							<img src="https://tambusai19.github.io/tsc19.github.io/images/logo.png">
 						</div>
+						<button id="installBtn" style="display:none;">Install Aplikasi</button>
 						<div class="content">
 							<div class="inner">
 								<h1>Tambusai Project Charter</h1>
@@ -363,6 +364,35 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
+			let deferredPrompt;
+
+			// Cek apakah aplikasi sudah diinstal 
+			// utk android window.matchMedia('(display-mode: standalone)').matches
+			const isInStandaloneMode = window.navigator.standalone === true;
+
+			// Sembunyikan tombol install jika sudah terinstal
+			const installBtn = document.querySelector('#installBtn');
+			if (isInStandaloneMode) {
+			  installBtn.style.display = 'none';
+			  console.log('App sudah diinstal');
+			} else {
+			  window.addEventListener('beforeinstallprompt', (e) => {
+				e.preventDefault();
+				deferredPrompt = e;
+				installBtn.style.display = 'block';
+			  });
+
+			  installBtn.addEventListener('click', async () => {
+				installBtn.style.display = 'none';
+				deferredPrompt.prompt();
+				const { outcome } = await deferredPrompt.userChoice;
+				if (outcome === 'accepted') {
+				  console.log('User accepted the install prompt');
+				}
+				deferredPrompt = null;
+			  });
+			}
+
 			if (!navigator.serviceWorker.controller) {
 				navigator.serviceWorker.register("https://tambusai19.github.io/tsc19.github.io/sw.js").then(function(reg) {
 					console.log("Service worker has been registered for scope: " + reg.scope);
