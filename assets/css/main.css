@@ -1699,3 +1699,11 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+@supports (-webkit-touch-callout: none) {
+  /* Android WebView / iOS Safari */
+  #bg, #bg:after, #bg:before {
+    position: absolute !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
