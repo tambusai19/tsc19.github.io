@@ -1105,7 +1105,7 @@ input, select, textarea {
 		line-height: calc(2.75rem - 2px);
 	}
 
-/* BG */
+/* BG
 
 	#bg {
 		-moz-transform: scale(1.0);
@@ -1180,7 +1180,7 @@ input, select, textarea {
 		body.is-preload #bg:before {
 			background-color: #000000;
 		}
-
+ */
 /* Wrapper */
 
 	#wrapper {
