@@ -369,6 +369,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			// Cek apakah aplikasi sudah diinstal 
 			// utk android window.matchMedia('(display-mode: standalone)').matches
 			const isInStandaloneMode = window.navigator.standalone === true;
+			// Helper: deteksi browser iOS
+			const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
 
 			// Sembunyikan tombol install jika sudah terinstal
 			const installBtn = document.querySelector('#installBtn');
@@ -376,6 +378,20 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			  installBtn.style.display = 'none';
 			  console.log('App sudah diinstal');
 			} else {
+			  if (isIos) {
+				installBtn.style.display = 'block';
+				installBtn.textContent = 'Tambahkan ke Layar Utama';
+				installBtn.addEventListener('click', () => {
+				  alert(
+					'Untuk menginstal aplikasi:\n\n' +
+					'1. Tap tombol "Share" (ikon kotak panah ke atas) di Safari.\n' +
+					'2. Pilih "Add to Home Screen" / "Tambahkan ke Layar Utama".\n' +
+					'3. Buka dari ikon yang muncul di layar utama.'
+				  );
+				});
+				console.log('📱 Safari iOS terdeteksi — install manual');
+			  }
+			  
 			  window.addEventListener('beforeinstallprompt', (e) => {
 				e.preventDefault();
 				deferredPrompt = e;
