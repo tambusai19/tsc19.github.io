@@ -1,7 +1,7 @@
 {
     "name": "TPC19",
     "short_name": "Project Charter",
-    "start_url": "/",
+    "start_url": "https://tambusai19.github.io/tsc19.github.io/",
     "icons": [
         {
             "src": "../favicon/web-app-manifest-192x192.png",
