@@ -1217,7 +1217,7 @@ input, select, textarea {
 				padding: 3rem 2rem;
 			}
 			#header .logo img {
-				width: 111px !important;
+				width: 114px !important;
 			}
 
 		}
@@ -1228,7 +1228,7 @@ input, select, textarea {
 				padding: 2rem 1rem;
 			}
 			#header .logo img {
-				width: 93px !important;
+				width: 96px !important;
 			}
 
 		}
@@ -1239,7 +1239,7 @@ input, select, textarea {
 				padding: 1rem;
 			}
 			#header .logo img {
-				width: 72px !important;
+				width: 95px !important;
 			}
 			#header nav ul li a{
 				font-size:1.5rem !important;
@@ -1314,8 +1314,8 @@ input, select, textarea {
 			display: block;
 			position: relative;
 			left: -13px;
-			top: -16px;
-			width: 140px;
+			top: -22px;
+			width: 143px;
 		}
 
 			#header .logo .icon:before {
