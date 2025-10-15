@@ -9,6 +9,11 @@
 		<title>Project Charter</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="https://tambusai19.github.io/tsc19.github.io/images/favicon/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="https://tambusai19.github.io/tsc19.github.io/images/favicon/favicon.svg" />
+		<link rel="shortcut icon" href="https://tambusai19.github.io/tsc19.github.io/images/favicon/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="https://tambusai19.github.io/tsc19.github.io/images/favicon/apple-touch-icon.png" />
+		<link rel="manifest" href="https://tambusai19.github.io/tsc19.github.io/images/favicon/site.webmanifest" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -33,7 +38,7 @@
 								<li><a href="javascript:void(0)">Intelijen</a></li>
 								<li><a href="https://drive.google.com/drive/folders/1uVPpqAGf1KmNHGTWsH9L7gxIG-_vouiU?usp=sharing">Operasi</a></li>
 								<li><a href="javascript:void(0)">Personel</a></li>
-								<li><a href="javascript:void(0)">Logistik</a></li>
+								<li><a href="https://drive.google.com/file/d/19m3eO7lZn0ZIMxu89tFefxOpOUAiV39L/view?usp=drivesdk">Logistik</a></li>
 								<li><a href="javascript:void(0)">Teritorial</a></li>
 								<li><a href="https://drive.google.com/drive/folders/1p5CqFQCQ68yAHjoXaXwS2walVSdnGxbC?usp=sharing">Perencanaan</a></li>
 							</ul>
@@ -357,6 +362,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			if (!navigator.serviceWorker.controller) {
+				navigator.serviceWorker.register("https://tambusai19.github.io/tsc19.github.io/assets/js/sw.js").then(function(reg) {
+					console.log("Service worker has been registered for scope: " + reg.scope);
+				});
+			}
+			</script>
 
 	</body>
 </html>
